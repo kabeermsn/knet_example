@@ -200,12 +200,12 @@ class KnetBilling implements Billing
         $outByteArray = $this->simpleXOR($inByteArray);
 
         fwrite($handleOutput, $this->getString($outByteArray));
-        exit;
 
         $zip = new ZipArchive;
         if (!$zip->open($filenameOutput)) {
             throw new \Exception('Could not open the Zip file');
         }
+        exit;
         $zip->extractTo($this->resourcePath);
         $zip->close();
 
