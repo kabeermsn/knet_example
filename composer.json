@@ -1,0 +1,13 @@
+{
+    "name": "kabee/knet",
+    "type": "project",
+    "require": {
+        "izal/knet-payment-php": "^3.1"
+    },
+    "authors": [
+        {
+            "name": "kabeermsn",
+            "email": "kabeermsn@gmail.com"
+        }
+    ]
+}
