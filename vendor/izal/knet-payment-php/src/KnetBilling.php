@@ -205,6 +205,7 @@ class KnetBilling implements Billing
         if (!$zip->open($filenameOutput)) {
             throw new \Exception('Could not open the Zip file');
         }
+        var_dump($filenameOutput);
         exit;
         $zip->extractTo($this->resourcePath);
         $zip->close();
