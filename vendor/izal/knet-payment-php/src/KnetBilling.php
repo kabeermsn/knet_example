@@ -133,7 +133,6 @@ class KnetBilling implements Billing
     private function initResourceFile()
     {
         $payload = $this->parseResourceFile();
-        var_dump($payload);
         foreach ($payload as $key => $value) {
             $this->{$key} = $value;
         }
@@ -201,6 +200,7 @@ class KnetBilling implements Billing
         $outByteArray = $this->simpleXOR($inByteArray);
 
         fwrite($handleOutput, $this->getString($outByteArray));
+        exit;
 
         $zip = new ZipArchive;
         if (!$zip->open($filenameOutput)) {
