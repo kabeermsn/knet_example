@@ -206,6 +206,7 @@ class KnetBilling implements Billing
             throw new \Exception('Could not open the Zip file');
         }
         $zip->extractTo($this->resourcePath);
+        exit();
         $zip->close();
 
         $xmlNameInput = $this->resourcePath . $this->alias . ".xml";
