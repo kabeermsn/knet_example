@@ -133,6 +133,7 @@ class KnetBilling implements Billing
     private function initResourceFile()
     {
         $payload = $this->parseResourceFile();
+        var_dump($payload);
         foreach ($payload as $key => $value) {
             $this->{$key} = $value;
         }
